@@ -1,0 +1,296 @@
+lab1:
+  input:
+    lower:
+      - coffee
+      - tea
+      - lemonade
+    upper:
+      - antitea
+      - anticoffee
+      - juice
+  expected:
+    lower:
+      - lemonade
+    upper:
+      - juice
+lab2:
+  input:
+    lower:
+      - coffee
+      - tea
+      - juice
+    upper:
+      - antijuice
+      - anticoffee
+      - lemonade
+  expected:
+    lower:
+      - tea
+    upper:
+      - lemonade
+lab3:
+  input:
+    lower:
+      - coffee
+      - tea
+      - juice
+      - antiwater
+    upper:
+      - antijuice
+      - lemonade
+      - water
+  expected:
+    lower:
+      - coffee
+      - tea
+    upper:
+      - lemonade
+
+lab4:
+  input:
+    lower:
+      - coffee
+      - antitea
+      - tea
+      - water
+    upper:
+      - antiwater
+      - lemonade
+  expected:
+    lower:
+      - coffee
+      - antitea
+      - tea
+    upper:
+      - lemonade
+
+update_shelves:
+  input:
+    lower:
+      - coffee
+      - tea
+      - juice
+    upper:
+      - lemonade
+      - water
+      - antitea
+  expected:
+    lower:
+      - coffee
+      - juice
+    upper:
+      - lemonade
+      - water
+
+reaction:
+  input:
+    lower:
+      - coffee
+      - tea
+    upper:
+      - anticoffee
+      - water
+  expected:
+    lower: 
+      - tea
+    upper:
+      - water
+
+three_shelves:
+  input:
+    lower:
+      - coffee
+      - tea
+    upper:
+      - anticoffee
+      - water
+    middle:
+      - antitea
+      - coffee
+
+one_shelf:
+  input:
+    lower:
+      - coffee
+
+empty_shelf_upper:
+  input:
+    lower:
+      - coffee
+      - tea
+      - juice
+    upper:
+  expected:
+    lower:
+      - coffee
+      - tea
+      - juice
+    upper:
+      - none
+
+empty_shelf_lower:
+  input:
+    lower:
+    upper:
+      - coffee
+      - tea
+      - juice
+  expected:
+    lower:
+      - none
+    upper:
+      - coffee
+      - tea
+      - juice
+
+anti_lower_shelf:
+  input:
+    lower:
+      - coffee
+      - tea
+      - antiantiwater
+      - antijuice
+      - lemonade
+    upper:
+      - cola
+      - anticoffee
+      - latte
+      - antitea
+      - anticoffee
+      - water
+
+anti_upper_shelf:
+  input:
+    lower:
+      - coffee
+      - tea
+      - antijuice
+      - antieycholra
+      - psittaccina
+    upper:
+      - alcea
+      - antianticoffe
+      - campanula
+      - antitea
+      - antiinvolucrata
+      - juice
+
+anti_both_shelves:
+  input:
+    lower:
+      - coffee
+      - tea
+      - antiantiwater
+      - antijuice
+      - lemonade
+    upper:
+      - alcea
+      - antianticoffe
+      - campanula
+      - antitea
+      - antiinvolucrata
+      - juice
+
+uppercase_lower:
+  input:
+    lower:
+      - coffee
+      - tea
+      - JUICE
+    upper:
+      - lemonade
+      - water
+      - antitea
+  expected:
+    lower:
+      - coffee
+      - tea
+      - juice
+    upper:
+      - lemonade
+      - water
+      - antitea
+
+uppercase_upper:
+  input:
+    lower:
+      - coffee
+      - tea
+      - juice
+    upper:
+      - water
+      - LEMONADE
+      - antitea
+  expected:
+    lower:
+      - coffee
+      - tea
+      - juice
+    upper:
+      - water
+      - lemonade
+      - antitea
+
+lower_uppercase:
+  input:
+    LOWER:
+      - coffee
+      - tea
+      - juice
+    upper:
+      - lemonade
+      - water
+      - antitea
+  expected:
+    lower:
+      - coffee
+      - tea
+      - juice
+    upper:
+      - lemonade
+      - water
+      - antitea
+
+upper_uppercase:
+  input:
+    lower:
+      - coffee
+      - tea
+      - juice
+    UPPER:
+      - tea
+      - water
+      - antitea
+  expected:
+    lower:
+      - coffee
+      - tea
+      - juice
+    upper:
+      - tea
+      - water
+      - antitea
+
+order:
+  input:
+    lower: 
+      - coffee
+      - tea
+      - juice
+      - coffee
+    upper:
+      - anticoffee
+      - lemonade
+  output:
+    lower1:
+      - tea
+      - juice
+      - coffee
+    lower2:
+      - coffee
+      - tea
+      - juice
+    upper:
+      - lemonade
+
+empty:
